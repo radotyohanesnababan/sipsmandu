@@ -21,7 +21,7 @@ export default function Index(props) {
                     data={{
                         title: 'Harian',
                         icon: IconCalendar,
-                        background: 'text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600',
+                        background: 'text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600',
                         iconClassName: 'text-white rounded-lg',
                     }}
                 >

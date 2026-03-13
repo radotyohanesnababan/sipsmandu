@@ -44,8 +44,8 @@ class WelcomeController extends Controller
             ],
             
             'page_settings'=>[
-                'title'=>'Sistem Perpustakaan SMPN 1 Tarutung',
-                'subtitle'=>'Selamat Datang di Perpustakaan SMPN 1 Tarutung',
+                'title'=>'Sistem Perpustakaan SMA N 2 Siborongborong',
+                'subtitle'=>'Selamat Datang di Perpustakaan SMA N 2 Siborongborong',
                 'method'=>'GET',
                 
             ],

@@ -20,9 +20,9 @@ return [
     'allowed_methods' => ['*'],
 
     // Bagian paling penting: Masukkan domain utama kamu di sini
-    'allowed_origins' => ['https://sparta.my.id',
-    'https://www.sparta.my.id',
-    'https://server2.sparta.my.id'],
+    'allowed_origins' => ['https://SIMPAS.my.id',
+    'https://www.SIMPAS.my.id',
+    'https://server2.SIMPAS.my.id'],
 
     'allowed_origins_patterns' => [],
 

@@ -21,7 +21,7 @@ export default function ErrorHandling({ status }) {
                             {errorMessages.description}
                         </p>
                         <div className="flex items-start justify-center mt-10 gap-x-6">
-                            <Button variant="skyblue" asChild>
+                            <Button variant="green" asChild>
                                 <Link href="/">Kembali ke Halaman Awal</Link>
                             </Button>
                         </div>

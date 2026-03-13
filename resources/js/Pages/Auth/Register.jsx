@@ -149,7 +149,7 @@ export default function Register({ kelas = [] }) {
                                     </div>
                                     <Button
                                         type="submit"
-                                        variant="skyblue"
+                                        variant="green"
                                         size="xl"
                                         className="w-full"
                                         disabled={processing}

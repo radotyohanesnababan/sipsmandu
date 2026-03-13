@@ -30,7 +30,7 @@ export default function Edit(props) {
                     subtitle={props.page_settings.subtitle}
                     icon={IconVersions}
                 />
-                <Button variant="skyblue" size="lg" asChild>
+                <Button variant="green" size="lg" asChild>
                     <Link href={route('admin.permissions.index')}>
                         <IconArrowLeft className="size-4"></IconArrowLeft>Kembali
                     </Link>
@@ -68,7 +68,7 @@ export default function Edit(props) {
                             <Button type="button" variant="ghost" onClick={() => reset()} size="lg">
                                 Reset
                             </Button>
-                            <Button variant="skyblue" type="submit" size="lg">
+                            <Button variant="green" type="submit" size="lg">
                                 Simpan
                             </Button>
                         </div>

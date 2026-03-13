@@ -46,7 +46,7 @@
         <div style="line-height:1.1;">
           <div style="font-size:15px; border: none; font-weight:700; margin-bottom:2px;">PEMERINTAH KABUPATEN TAPANULI UTARA</div>
           <div style="font-size:15px; border: none; font-weight:700; margin-bottom:2px;">DINAS PENDIDIKAN DAN KEBUDAYAAN</div>
-          <div style="font-size:15px; border: none; font-weight:700; margin-bottom:4px;">SMP NEGERI 1 TARUTUNG</div>
+          <div style="font-size:15px; border: none; font-weight:700; margin-bottom:4px;">SMA N 2 Siborongborong</div>
           <div style="font-size:11px; border: none; margin-bottom:2px;">
             Jalan Nahum Situmorang Tarutung 22413 &nbsp; Provinsi Sumatera Utara
           </div>
@@ -119,7 +119,7 @@
 
     <div style="text-align:center; margin-top:60px;">
         Menyetujui,<br>
-        Kepala SMP Negeri 1 Tarutung<br><br><br><br>
+        Kepala SMA N 2 Siborongborong<br><br><br><br>
         (..........................................)<br>
         NIP. ....................................
     </div>

@@ -35,7 +35,7 @@ class ResetPasswordMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Reset Password — Tim Perpustakaan SMP N 1 Tarutung')
+        return $this->subject('Reset Password — Tim Perpustakaan SMA N 2 Siborongborong')
                     ->from(config('mail.from.address'), config('mail.from.name'))
                     ->view('emails.reset-password')
                     ->with([

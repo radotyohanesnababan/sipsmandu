@@ -38,7 +38,7 @@ export default function VerifyEmail({ status }) {
                             {/* FORM */}
                             <form onSubmit={onHandleSubmit}>
                                 <div className="grid gap-4 ">
-                                    <Button variant="blue" size="xl" className="w-full" disabled={processing}>
+                                    <Button variant="green" size="xl" className="w-full" disabled={processing}>
                                         Kirim Ulang Tautan Verifikasi
                                     </Button>
                                 </div>

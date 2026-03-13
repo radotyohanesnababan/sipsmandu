@@ -1,6 +1,6 @@
-# 📚 SPARTA - Sistem Informasi Perpustakaan SMP N 1 Tarutung
+# 📚 SIMPAS - Sistem Informasi Perpustakaan SMA N 2 Siborongborong
 
-SPARTA adalah aplikasi berbasis web untuk mengelola perpustakaan sekolah.  
+SIMPAS adalah aplikasi berbasis web untuk mengelola perpustakaan sekolah.  
 Dibangun menggunakan **Laravel + React + MySQL**, aplikasi ini membantu admin dan anggota dalam proses pengelolaan buku, peminjaman, dan pengembalian.
 
 ---

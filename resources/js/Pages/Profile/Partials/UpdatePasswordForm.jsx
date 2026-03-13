@@ -104,7 +104,7 @@ export default function UpdatePasswordForm({ className = '' }) {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Button variant="skyblue" size="lg" disabled={processing}>
+                        <Button variant="green" size="lg" disabled={processing}>
                             Save
                         </Button>
 

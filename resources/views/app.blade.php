@@ -13,14 +13,14 @@
         </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="canonical" href="https://sparta.my.id" />
+        <link rel="canonical" href="https://SIMPAS.my.id" />
 
-        <meta name="description" content="SPARTA - Sistem Perpustakaan SMP Negeri 1 Tarutung. Koleksi buku lengkap, kemudahan akses, dan layanan terbaik untuk mendukung pembelajaran Anda.">
-        <meta name="keywords" content="Perpustakaan, SMP Negeri 1 Tarutung, Buku, Koleksi Buku, Layanan Perpustakaan, Pendidikan, Sumber Belajar, SPARTA, Buku Online, Sekolah, Tarutung">
-        <meta name="author" content="SMP Negeri 1 Tarutung">
+        <meta name="description" content="SIMPAS - Sistem Perpustakaan SMA N 2 Siborongborong. Koleksi buku lengkap, kemudahan akses, dan layanan terbaik untuk mendukung pembelajaran Anda.">
+        <meta name="keywords" content="Perpustakaan, SMA N 2 Siborongborong, Buku, Koleksi Buku, Layanan Perpustakaan, Pendidikan, Sumber Belajar, SIMPAS, Buku Online, Sekolah, Tarutung">
+        <meta name="author" content="SMA N 2 Siborongborong">
 
         <link rel="icon" type="image/png" href="{{ asset('storage/logo/favicon.png') }}" sizes="48x48">
-        <link rel="sitemap" type="application/xml" href="https://sparta.my.id/sitemap.xml">
+        <link rel="sitemap" type="application/xml" href="https://SIMPAS.my.id/sitemap.xml">
 
        
 
@@ -36,15 +36,15 @@
         <!-- Title -->
         <title inertia>
     @if(request()->is('/'))
-         SPARTA | Sistem Perpustakaan SMP Negeri 1 Tarutung
+         SIMPAS | Sistem Perpustakaan SMA N 2 Siborongborong
     @else
-        SPARTA | Sistem Perpustakaan SMP Negeri 1 Tarutung
+        SIMPAS | Sistem Perpustakaan SMA N 2 Siborongborong
     @endif
     </title>
-        <meta property="og:title" content="Perpustakaan SPARTA - SMP Negeri 1 Tarutung">
-        <meta property="og:description" content="Koleksi buku lengkap dan e-book pendidikan di SPARTA, perpustakaan digital SMP Negeri 1 Tarutung.">
-        <meta property="og:image" content="https://sparta.my.id/storage/logo/logo.webp">
-        <meta property="og:url" content="https://sparta.my.id">
+        <meta property="og:title" content="Perpustakaan SIMPAS - SMA N 2 Siborongborong">
+        <meta property="og:description" content="Koleksi buku lengkap dan e-book pendidikan di SIMPAS, perpustakaan digital SMA N 2 Siborongborong.">
+        <meta property="og:image" content="https://SIMPAS.my.id/storage/logo/logo.webp">
+        <meta property="og:url" content="https://SIMPAS.my.id">
         <!-- Scripts -->
         @routes
         @viteReactRefresh
@@ -55,11 +55,11 @@
             {
             "@context": "https://schema.org",
             "@type": ["EducationalOrganization", "Library"],
-            "name": "SMP Negeri 1 Tarutung - Perpustakaan SPARTA",
-            "url": "https://sparta.my.id",
-            "logo": "https://sparta.my.id/storage/logo/logo.webp",
+            "name": "SMA N 2 Siborongborong - Perpustakaan SIMPAS",
+            "url": "https://SIMPAS.my.id",
+            "logo": "https://SIMPAS.my.id/storage/logo/logo.webp",
             "sameAs": ["https://www.smpnegeri1tarutung.sch.id"],
-            "description": "Perpustakaan digital SMP Negeri 1 Tarutung dengan koleksi buku dan e-book pendidikan.",
+            "description": "Perpustakaan digital SMA N 2 Siborongborong dengan koleksi buku dan e-book pendidikan.",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Jl. Nahum Situmorang No. 1, Hutatoruan V",
@@ -77,9 +77,9 @@
             {
             "@context": "https://schema.org",
             "@type": "Library",
-            "name": "Perpustakaan SPARTA SMP Negeri 1 Tarutung",
-            "image": "https://sparta.my.id/storage/logo/logo.webp",
-            "url": "https://sparta.my.id",
+            "name": "Perpustakaan SIMPAS SMA N 2 Siborongborong",
+            "image": "https://SIMPAS.my.id/storage/logo/logo.webp",
+            "url": "https://SIMPAS.my.id",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Jl. Nahum Situmorang No. 1, Hutatoruan V",

@@ -63,7 +63,7 @@ export default function Index(props) {
                     data={{
                         title: 'Pengecekan',
                         icon: IconChecklist,
-                        background: 'text-white bg-gradient-to-tr from-blue-400 via-blue-500 to-blue-600',
+                        background: 'text-white bg-gradient-to-tr from-green-400 via-green-500 to-green-600',
                         iconClassName: 'text-white',
                     }}
                 >
@@ -223,7 +223,7 @@ export default function Index(props) {
 
                                     <TableCell>
                                         <div className="flex items-center gap-x-1">
-                                            <Button variant="blue" size="sm" asChild>
+                                            <Button variant="green" size="sm" asChild>
                                                 <Link href={route('front.return-books.show', [return_book.id])}>
                                                     <IconEye size="4"></IconEye>
                                                 </Link>

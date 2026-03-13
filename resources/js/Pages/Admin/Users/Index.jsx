@@ -59,7 +59,7 @@ export default function Index(props) {
                 />
 
                 <div className="flex gap-2">
-                    <Button variant="skyblue" size="lg" asChild>
+                    <Button variant="green" size="lg" asChild>
                         <Link href={route('admin.users.create', { role: 'member' })}>
                             <IconPlus className="size-4" />
                             Tambah Anggota
@@ -197,7 +197,7 @@ export default function Index(props) {
                                     <TableCell>{user.created_at}</TableCell>
                                     <TableCell>
                                         <div className="flex items-center gap-x-1">
-                                            <Button variant="blue" size="sm" asChild>
+                                            <Button variant="green" size="sm" asChild>
                                                 <Link href={route('admin.users.edit', user.nisn)}>
                                                     <IconPencil className="size-4" />
                                                 </Link>

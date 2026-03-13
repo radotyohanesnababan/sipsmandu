@@ -88,7 +88,7 @@ export default function ResetPassword({ token, email }) {
 
                                     <Button
                                         type="submit"
-                                        variant="blue"
+                                        variant="green"
                                         size="xl"
                                         className="mt-4 w-full"
                                         disabled={processing}

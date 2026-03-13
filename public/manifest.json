@@ -1,6 +1,6 @@
 {
-  "name": "SPARTA App",
-  "short_name": "SPARTA App",
+  "name": "SIMPAS App",
+  "short_name": "SIMPAS App",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

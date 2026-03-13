@@ -35,7 +35,7 @@ export default function Dashboard(props) {
                         data={{
                             title: 'Total Buku',
                             icon: IconBooks,
-                            background: 'text-white bg-gradient-to-tr from-blue-400 via-blue-500 to-blue-600',
+                            background: 'text-white bg-gradient-to-tr from-green-400 via-green-500 to-green-600',
                             iconClassName: 'text-white',
                         }}
                     >
@@ -80,7 +80,7 @@ export default function Dashboard(props) {
                                         <CardTitle> Transaksi Peminjaman</CardTitle>
                                         <CardDescription>Data Peminjaman Terbaru</CardDescription>
                                     </div>
-                                    <Button variant="skyblue" asChild>
+                                    <Button variant="green" asChild>
                                         {auth.role.some((role) => ['admin'].includes(role)) ? (
                                             <Link href={route('admin.borroweds.index')}>
                                                 Lihat Semua
@@ -123,7 +123,7 @@ export default function Dashboard(props) {
                                         <CardTitle> Transaksi Pengembalian</CardTitle>
                                         <CardDescription>Data Pengembalian Terbaru</CardDescription>
                                     </div>
-                                    <Button variant="skyblue" asChild>
+                                    <Button variant="green" asChild>
                                         {auth.role.some((role) => ['admin'].includes(role)) ? (
                                             <Link href={route('admin.return-books.index')}>
                                                 Lihat Semua

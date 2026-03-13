@@ -5,8 +5,8 @@ export default function ApplicationLogo({ url = '#', size = 'size-9', isTitle = 
             <img src="/storage/logo/logo.webp" alt="Logo" className="h-12 w-12" loading="lazy" />
             {isTitle && (
                 <div className="flex flex-col">
-                    <span className="font-bold leading-none text-foreground">SPARTA</span>
-                    <span className="text-xs font-medium text-muted-foreground">SMP Negeri 1 Tarutung</span>
+                    <span className="font-bold leading-none text-foreground">SIMPAS</span>
+                    <span className="text-xs font-medium text-muted-foreground">SMA N 2 Siborongborong</span>
                 </div>
             )}
         </Link>

@@ -46,7 +46,7 @@ class DueReminderMail extends Mailable
     }
      public function build()
     {
-        return $this->subject('Pengingat Pengembalian Buku — SPARTA ')
+        return $this->subject('Pengingat Pengembalian Buku — SIMPAS ')
             ->from(config('mail.from.address'), config('mail.from.name'))
             ->view('emails.due-reminder')
             ->with([

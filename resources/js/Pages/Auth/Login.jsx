@@ -135,7 +135,7 @@ export default function Login({ status, canResetPassword }) {
                             <div>
                                 <Button
                                     type="submit"
-                                    variant="skyblue"
+                                    variant="green"
                                     size="xl"
                                     className="w-full mt-2"
                                     disabled={processing}

@@ -43,7 +43,7 @@ export default function Index(props) {
                     icon={IconAlertCircle}
                 />
 
-                <Button variant="skyblue" size="lg" asChild>
+                <Button variant="green" size="lg" asChild>
                     <Link href={route('admin.announcements.create')}>
                         <IconPlus className="size-4" />
                         Tambah
@@ -78,7 +78,7 @@ export default function Index(props) {
                                     <TableCell>{announcement.created_at}</TableCell>
                                     <TableCell>
                                         <div className="flex items-center gap-x-1">
-                                            <Button variant="blue" size="sm" asChild>
+                                            <Button variant="green" size="sm" asChild>
                                                 <Link href={route('admin.announcements.edit', [announcement])}>
                                                     <IconPencil className="size-4" />
                                                 </Link>

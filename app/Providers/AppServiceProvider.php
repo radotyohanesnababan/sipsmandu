@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         $host = request()->getHost();
 
         // 2. Jika host terdeteksi, gunakan host tersebut sebagai basis URL
-        // Ini jauh lebih aman daripada hardcoded sparta.my.id
+        // Ini jauh lebih aman daripada hardcoded SIMPAS.my.id
         if ($host) {
             \Illuminate\Support\Facades\URL::forceRootUrl("https://{$host}");
         }

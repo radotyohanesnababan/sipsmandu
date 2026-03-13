@@ -6,21 +6,21 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://sparta.my.id/</loc>
+    <loc>https://SIMPAS.my.id/</loc>
     <lastmod>2025-11-06T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://sparta.my.id/login</loc>
+    <loc>https://SIMPAS.my.id/login</loc>
     <lastmod>2025-11-06T00:00:00+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://sparta.my.id/register</loc>
+    <loc>https://SIMPAS.my.id/register</loc>
     <lastmod>2025-11-06T00:00:00+07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

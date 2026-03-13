@@ -59,7 +59,7 @@ export default function Index(props) {
                     icon={IconCategory}
                 />
 
-                <Button variant="skyblue" size="lg" asChild>
+                <Button variant="green" size="lg" asChild>
                     <Link href={route('admin.categories.create')}>
                         <IconPlus className="size-4" />
                         Tambah
@@ -173,7 +173,7 @@ export default function Index(props) {
                                     <TableCell>{category.created_at}</TableCell>
                                     <TableCell>
                                         <div className="flex items-center gap-x-1">
-                                            <Button variant="blue" size="sm" asChild>
+                                            <Button variant="green" size="sm" asChild>
                                                 <Link href={route('admin.categories.edit', [category])}>
                                                     <IconPencil className="size-4" />
                                                 </Link>

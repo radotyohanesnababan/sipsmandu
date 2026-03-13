@@ -16,11 +16,11 @@
                 style="width:80px; height:auto; margin-bottom:10px;">
 
                 <h2 style="margin:0; font-size:22px; color:#111827; font-weight:700;">
-                    SPARTA
+                    SIMPAS
                 </h2>
 
                 <p style="margin:5px 0 0; font-size:14px; color:#6b7280;">
-                    Sistem Informasi Perpustakaan SMP Negeri 1 Tarutung
+                    Sistem Informasi Perpustakaan SMA N 2 Siborongborong
                 </p>
             </td>
         </tr>
@@ -63,14 +63,14 @@
                     Salam hangat,
                 </p>
                 <p style="color:#2563eb; font-weight:700; font-size:15px;">
-                    Tim Perpustakaan SMP Negeri 1 Tarutung
+                    Tim Perpustakaan SMA N 2 Siborongborong
                 </p>
 
             </td>
         </tr>
         <tr>
             <td style="text-align:center; padding:15px; background:#f9fafb; font-size:12px; color:#9ca3af;">
-                © {{ date('Y') }} Perpustakaan SMP N 1 Tarutung. Semua Hak Dilindungi.
+                © {{ date('Y') }} Perpustakaan SMA N 2 Siborongborong. Semua Hak Dilindungi.
             </td>
         </tr>
 </table>

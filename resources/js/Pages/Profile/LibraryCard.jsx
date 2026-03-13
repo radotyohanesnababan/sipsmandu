@@ -46,7 +46,7 @@ export default function LibraryCard({ user}) {
                     <h2 className="font-bold text-lg text-black">{user.nama}</h2>
                     <p className="text-sm text-black">NISN: {user.nisn ?? "-"}</p>
                     <p className="text-sm text-black">Kelas: {user.kelas_id ?? "-"}</p>
-                    <p className="text-xs mt-2 text-gray-500">Kartu Perpustakaan SMP N 1 Tarutung</p>
+                    <p className="text-xs mt-2 text-gray-500">Kartu Perpustakaan SMA N 2 Siborongborong</p>
                 </div>
                 <div className="absolute top-2 right-3 text-sm font-semibold text-gray-600">
                     {new Date().getFullYear()}

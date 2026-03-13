@@ -47,7 +47,7 @@ export default function Index(props) {
                     icon={IconCreditCardPay}
                 />
 
-                <Button variant="skyblue" size="lg" asChild>
+                <Button variant="green" size="lg" asChild>
                     <Link href={route('admin.borroweds.create')}>
                         <IconPlus className="size-4" />
                         Tambah
@@ -203,7 +203,7 @@ export default function Index(props) {
                                                     </Link>
                                                 </Button>
                                             )}
-                                            <Button variant="blue" size="sm" asChild>
+                                            <Button variant="green" size="sm" asChild>
                                                 <Link href={route('admin.borroweds.edit', [borrowed])}>
                                                     <IconPencil className="size-4" />
                                                 </Link>

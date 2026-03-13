@@ -12,8 +12,8 @@
             <td style="background-color:#ffffff; padding:20px; text-align:center;">
                 <img src="{{ asset('storage/logo/logosekolah.png') }}" alt="Logo Perpustakaan"
                 style="width:80px; height:auto; margin-bottom:10px;">
-                <h2 style="color:#111827; margin:0;">SPARTA </h2>
-                <h2 style="color:#111827; margin:0;">Tim Perpustakaan SMP Negeri 1 Tarutung</h2>
+                <h2 style="color:#111827; margin:0;">SIMPAS </h2>
+                <h2 style="color:#111827; margin:0;">Tim Perpustakaan SMA N 2 Siborongborong</h2>
             </td>
         </tr>
 
@@ -38,7 +38,7 @@
                 </p>
 
                 <p style="color:#374151; margin-top:30px;">Salam hangat,</p>
-                <p style="color:#81a0e3; font-weight:bold;">Tim Perpustakaan SMP Negeri 1 Tarutung</p>
+                <p style="color:#81a0e3; font-weight:bold;">Tim Perpustakaan SMA N 2 Siborongborong</p>
             </td>
         </tr>
 
