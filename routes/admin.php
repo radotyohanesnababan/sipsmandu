@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\ReturnBookRecordController;
 use App\Http\Controllers\Admin\BookImportController;
 use App\Http\Controllers\Admin\MemberImportController;
+use App\Http\Controllers\Admin\ScanReturnController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth','role:admin')->prefix('admin')->group(function (){
@@ -29,6 +30,9 @@ Route::middleware('auth','role:admin')->prefix('admin')->group(function (){
        Route::get('reports', 'index')->name('admin.reports.index');
        Route::get('reports/generate', 'generate')->name('admin.reports.generate'); 
     });
+
+    Route::get('scan-return/find', [ScanReturnController::class, 'findByIsbn'])->name('admin.scan-return.find');
+    Route::post('scan-return/confirm', [ScanReturnController::class, 'confirmReturn'])->name('admin.scan-return.confirm');
 
     Route::controller(BookStockReportController::class)->group(function (){
         Route::get('book-stock-reports', 'index')->name('admin.book-stock-reports.index');

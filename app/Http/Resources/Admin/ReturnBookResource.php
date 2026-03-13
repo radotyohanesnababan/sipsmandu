@@ -38,6 +38,8 @@ class ReturnBookResource extends JsonResource
                 'nama' => $this->user?->nama,
                 'nisn' => $this->user?->nisn,
             ]),
+
+            
             
 
             // 'fine' => $this->whenLoaded('fine', [

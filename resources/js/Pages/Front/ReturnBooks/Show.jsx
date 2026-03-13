@@ -97,11 +97,7 @@ export default function Show(props) {
                 <Alert variant="destructive">
                     <AlertTitle>Informasi</AlertTitle>
                     <AlertDescription>
-                        Setelah melalui pengecekan, buku anda <strong>belum dikembalikan</strong>. Silakan segera
-                        mengembalikan buku atau hubungi petugas perpustakaan.
-                    </AlertDescription>
-                    <AlertDescription>
-                        Jika buku hilang, silahkan download surat pernyataan buku hilang dibawah ini dan serahkan ke
+                        Setelah melalui pengecekan, buku anda <strong>hilang</strong>. Silahkan download surat pernyataan buku hilang dibawah ini dan serahkan ke
                         petugas perpustakaan.
                     </AlertDescription>
                     <a

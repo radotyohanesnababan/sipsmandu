@@ -1,6 +1,7 @@
 import CardStat from '@/Components/CardStat';
 import ChartCustom from '@/Components/ChartCustom';
 import HeaderTitle from '@/Components/HeaderTitle';
+import ScanPengembalian from '@/Components/ScanPengembalian';
 import BookCard from '@/Components/ui/BookCard';
 import EbookCard from '@/Components/ui/EbookCard';
 import { Button } from '@/Components/ui/button';
@@ -31,6 +32,7 @@ export default function Dashboard(props) {
             </div>
             {auth.role.some((role) => ['admin'].includes(role)) && (
                 <><><div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+                    <ScanPengembalian />
                     <CardStat
                         data={{
                             title: 'Total Buku',

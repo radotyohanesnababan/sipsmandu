@@ -28,8 +28,8 @@
 <body>
     @php
     
-    $logoSekolahPath = public_path('storage/logo/logosekolah.png');
-    $logoPemkabPath  = public_path('storage/logo/logopemkab.png');
+    $logoSekolahPath = public_path('storage/logo/logosekolahx.png');
+    $logoPemkabPath  = public_path('storage/logo/logopemkabx.png');
 
     $logoSekolahBase64 = file_exists($logoSekolahPath) ? 'data:image/'.pathinfo($logoSekolahPath, PATHINFO_EXTENSION).';base64,'.base64_encode(file_get_contents($logoSekolahPath)) : null;
     $logoPemkabBase64  = file_exists($logoPemkabPath)  ? 'data:image/'.pathinfo($logoPemkabPath, PATHINFO_EXTENSION).';base64,'.base64_encode(file_get_contents($logoPemkabPath)) : null;
@@ -44,14 +44,14 @@
       </td>
       <td style="width: 64%; text-align: center; vertical-align: middle; border: none;">
         <div style="line-height:1.1;">
-          <div style="font-size:15px; border: none; font-weight:700; margin-bottom:2px;">PEMERINTAH KABUPATEN TAPANULI UTARA</div>
+          <div style="font-size:15px; border: none; font-weight:700; margin-bottom:2px;">PEMERINTAH PROVINSI SUMATERA UTARA</div>
           <div style="font-size:15px; border: none; font-weight:700; margin-bottom:2px;">DINAS PENDIDIKAN DAN KEBUDAYAAN</div>
-          <div style="font-size:15px; border: none; font-weight:700; margin-bottom:4px;">SMA N 2 Siborongborong</div>
+          <div style="font-size:15px; border: none; font-weight:700; margin-bottom:4px;">SMA NEGERI 2 SIBORONGBORONG</div>
           <div style="font-size:11px; border: none; margin-bottom:2px;">
-            Jalan Nahum Situmorang Tarutung 22413 &nbsp; Provinsi Sumatera Utara
+            Jalan Balige Km.1, Siborongborong 22474 &nbsp; Provinsi Sumatera Utara
           </div>
           <div style="font-size:11px;">
-            Email: <span style="text-decoration: none; color: #000;">smpn1tarutung.taput@gmail.com</span>
+            Email: <span style="text-decoration: none; color: #000;">sman2siborongborong@gmail.com</span>
           </div>
         </div>
       </td>
@@ -96,7 +96,7 @@
         <tr>
             <td></td>
             <td style="text-align:center;">
-                Tarutung, {{ \Carbon\Carbon::parse($returnBook->created_at)->translatedFormat('d F Y') }}<br>
+                Siborongborong, {{ \Carbon\Carbon::parse($returnBook->created_at)->translatedFormat('d F Y') }}<br>
                 Yang membuat pernyataan,<br><br><br><br>
                 ({{ $returnBook->user->name ?? '..........................................' }})
             </td>
