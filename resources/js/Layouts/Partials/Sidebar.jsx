@@ -37,6 +37,12 @@ export default function Sidebar({ url, auth }) {
                     />
                     <div className="px-3 py-2 text-sm font-semibold text-foreground">Peminjaman</div>
                     <NavLink
+                        url={route('admin.rombel-borrows.index')}
+                        active={url.startsWith('/admin/rombel-borrows')}
+                        title="Peminjaman Rombel"
+                        icon={IconCreditCardPay}
+                    />
+                    <NavLink
                         url={route('admin.borroweds.index')}
                         active={url.startsWith('/admin/borroweds')}
                         title="Riwayat Peminjaman"
@@ -48,6 +54,8 @@ export default function Sidebar({ url, auth }) {
                         title="Statistik Peminjaman"
                         icon={IconCreditCardPay}
                     />
+
+                    
                     <div className="px-3 py-2 text-sm font-semibold text-foreground">Pengembalian</div>
                     <NavLink
                         url={route('admin.return-books.index')}

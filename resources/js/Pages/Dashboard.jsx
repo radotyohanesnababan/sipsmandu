@@ -31,50 +31,57 @@ export default function Dashboard(props) {
                 ></HeaderTitle>
             </div>
             {auth.role.some((role) => ['admin'].includes(role)) && (
-                <><><div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
-                    <ScanPengembalian />
-                    <CardStat
-                        data={{
-                            title: 'Total Buku',
-                            icon: IconBooks,
-                            background: 'text-white bg-gradient-to-tr from-green-400 via-green-500 to-green-600',
-                            iconClassName: 'text-white',
-                        }}
-                    >
-                        <div className="text-2xl font-bold">{props.page_data.total_books}</div>
-                    </CardStat>
-                    <CardStat
-                        data={{
-                            title: 'Total Pengguna',
-                            icon: IconUsersGroup,
-                            background: 'text-white bg-gradient-to-tr from-purple-400 via-purple-500 to-purple-600',
-                            iconClassName: 'text-white',
-                        }}
-                    >
-                        <div className="text-2xl font-bold">{props.page_data.total_users}</div>
-                    </CardStat>
-                    <CardStat
-                        data={{
-                            title: 'Total Peminjaman',
-                            icon: IconCreditCardPay,
-                            background: 'text-white bg-gradient-to-tr from-rose-400 via-rose-500 to-rose-600',
-                            iconClassName: 'text-white',
-                        }}
-                    >
-                        <div className="text-2xl font-bold">{props.page_data.total_borrowed}</div>
-                    </CardStat>
-                    <CardStat
-                        data={{
-                            title: 'Total Pengembalian',
-                            icon: IconCreditCardRefund,
-                            background: 'text-white bg-gradient-to-tr from-lime-400 via-lime-500 to-lime-600',
-                            iconClassName: 'text-white',
-                        }}
-                    >
-                        <div className="text-2xl font-bold">{props.page_data.total_returned}</div>
-                    </CardStat>
+                <><>
+                <div className="flex flex-col gap-4 md:gap-8">
+    {/* Scan Pengembalian — full width */}
+    <ScanPengembalian />
 
-                </div><ChartCustom chartData={props.page_data.transactionsChart} /></><div className="flex flex-col justify-between w-full gap-2 lg:flex-row">
+    {/* 4 Card Stats */}
+    <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-4">
+        <CardStat
+            data={{
+                title: 'Total Buku',
+                icon: IconBooks,
+                background: 'text-white bg-gradient-to-tr from-green-400 via-green-500 to-green-600',
+                iconClassName: 'text-white',
+            }}
+        >
+            <div className="text-2xl font-bold">{props.page_data.total_books}</div>
+        </CardStat>
+        <CardStat
+            data={{
+                title: 'Total Pengguna',
+                icon: IconUsersGroup,
+                background: 'text-white bg-gradient-to-tr from-purple-400 via-purple-500 to-purple-600',
+                iconClassName: 'text-white',
+            }}
+        >
+            <div className="text-2xl font-bold">{props.page_data.total_users}</div>
+        </CardStat>
+        <CardStat
+            data={{
+                title: 'Total Peminjaman',
+                icon: IconCreditCardPay,
+                background: 'text-white bg-gradient-to-tr from-rose-400 via-rose-500 to-rose-600',
+                iconClassName: 'text-white',
+            }}
+        >
+            <div className="text-2xl font-bold">{props.page_data.total_borrowed}</div>
+        </CardStat>
+        <CardStat
+            data={{
+                title: 'Total Pengembalian',
+                icon: IconCreditCardRefund,
+                background: 'text-white bg-gradient-to-tr from-lime-400 via-lime-500 to-lime-600',
+                iconClassName: 'text-white',
+            }}
+        >
+            <div className="text-2xl font-bold">{props.page_data.total_returned}</div>
+        </CardStat>
+    </div>
+</div>
+                
+                <ChartCustom chartData={props.page_data.transactionsChart} /></><div className="flex flex-col justify-between w-full gap-2 lg:flex-row">
                         <Card className="w-full lg:w-1/2">
                             <CardHeader>
                                 <div className="flex flex-col justify-between gap-y-4 lg:flex-row lg:items-center">

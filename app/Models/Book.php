@@ -68,6 +68,18 @@ public function getCoverUrlAttribute()
         return $this->hasMany(Borrowed::class);
     }
 
+    public function stock_rombel_borrow(int $qty): void
+{
+    $this->stock->decrement('available', $qty);
+    $this->stock->increment('borrowed', $qty);
+}
+ 
+public function stock_rombel_return(int $qty): void
+{
+    $this->stock->increment('available', $qty);
+    $this->stock->decrement('borrowed', $qty);
+}
+
     public function scopeFilter(Builder $query, array $filters) : void
     {
         $query->when($filters['search']?? null, function($query, $search){

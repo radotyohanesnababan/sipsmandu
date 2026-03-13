@@ -60,6 +60,7 @@ export default function AppLayout({ title, children }) {
                                 <SidebarResponsive url={url} auth={auth} />
                             </SheetContent>
                         </Sheet>
+                        <ThemeSwitcher />
                         {/* dropdown */}
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>

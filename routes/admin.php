@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\ReturnBookRecordController;
 use App\Http\Controllers\Admin\BookImportController;
 use App\Http\Controllers\Admin\MemberImportController;
+use App\Http\Controllers\Admin\RombelBorrowController;
 use App\Http\Controllers\Admin\ScanReturnController;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,15 @@ Route::middleware('auth','role:admin')->prefix('admin')->group(function (){
 
         
     });
+    Route::controller(RombelBorrowController::class)->group(function () {
+    Route::get('rombel-borrows', 'index')->name('admin.rombel-borrows.index');
+    Route::get('rombel-borrows/create', 'create')->name('admin.rombel-borrows.create');
+    Route::post('rombel-borrows', 'store')->name('admin.rombel-borrows.store');
+    Route::get('rombel-borrows/{rombelBorrow}', 'show')->name('admin.rombel-borrows.show');
+    Route::post('rombel-borrows/{rombelBorrow}/return', 'return')->name('admin.rombel-borrows.return');
+    Route::delete('rombel-borrows/{rombelBorrow}', 'destroy')->name('admin.rombel-borrows.destroy');
+});
+
     Route::controller(PublisherController::class)->group(function (){
         Route::get('publishers', 'index')->name('admin.publishers.index');
         Route::get('publishers/create', 'create')->name('admin.publishers.create');

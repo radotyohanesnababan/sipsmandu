@@ -42,6 +42,12 @@ export default function SidebarResponsive({ url, auth }) {
 
                         <div className="px-3 py-2 text-sm font-semibold text-foreground">Peminjaman</div>
                         <NavLinkResponsive
+                                                url={route('admin.rombel-borrows.index')}
+                                                active={url.startsWith('/admin/rombel-borrows')}
+                                                title="Peminjaman Rombel"
+                                                icon={IconCreditCardPay}
+                                            />
+                        <NavLinkResponsive
                             url={route('admin.borroweds.index')}
                             active={url.startsWith('/admin/borrowed')}
                             title="Riwayat Peminjaman"
