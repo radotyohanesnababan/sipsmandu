@@ -21,6 +21,7 @@ class BorrowedResource extends JsonResource
             'returned_at' => $this->returned_at ? $this->returned_at->format('d M Y') : null,
             'created_at' => $this->created_at->format('d M Y'),
             'has_returned_book' => $this->returnBook()->exists(),
+            'status' => $this->status,
             'user'=> $this->whenLoaded('user', [
                 'nisn' => $this->user?->nisn,
                 'nama' => $this->user?->nama,

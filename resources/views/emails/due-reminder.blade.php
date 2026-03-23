@@ -12,7 +12,7 @@
 
         <tr>
             <td style="text-align:center; padding:25px 20px; background:#ffffff; border-bottom:1px solid #e5e7eb;">
-                <img src="{{ asset('storage/logo/logosekolah.png') }}" alt="Logo Perpustakaan"
+                <img src="{{ asset('storage/logo/logosekolah.webp') }}" alt="Logo Perpustakaan"
                 style="width:80px; height:auto; margin-bottom:10px;">
 
                 <h2 style="margin:0; font-size:22px; color:#111827; font-weight:700;">

@@ -29,14 +29,16 @@ export default function Show(props) {
                     </div>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{props.book.deskripsi}</p>
                     <div className="flex mt-10">
-                        {props.book.stock.available > 0 ? (
+                        {props.book.active_borrowed ? (
+                            <Button size="lg" variant="outline" disabled>
+                                Sudah Dibooking — Menunggu Pengambilan
+                            </Button>
+                        ) : props.book.stock.available > 0 ? (
                             <Button
                                 size="lg"
-                                onClick={() => {
-                                    router.post(route('front.borroweds.store', { book: props.book.slug }));
-                                }}
+                                onClick={() => router.post(route('front.borroweds.store', { book: props.book.slug }))}
                             >
-                                Pinjam Sekarang
+                                Booking Sekarang
                             </Button>
                         ) : (
                             <Button size="lg" variant="outline" disabled>

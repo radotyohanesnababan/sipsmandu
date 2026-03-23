@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://SIMPAS.my.id" />
 
         <meta name="description" content="SIMPAS - Sistem Perpustakaan SMA N 2 Siborongborong. Koleksi buku lengkap, kemudahan akses, dan layanan terbaik untuk mendukung pembelajaran Anda.">
-        <meta name="keywords" content="Perpustakaan, SMA N 2 Siborongborong, Buku, Koleksi Buku, Layanan Perpustakaan, Pendidikan, Sumber Belajar, SIMPAS, Buku Online, Sekolah, Tarutung">
+        <meta name="keywords" content="Perpustakaan, SMA N 2 Siborongborong, Buku, Koleksi Buku, Layanan Perpustakaan, Pendidikan, Sumber Belajar, SIMPAS, Buku Online, Sekolah, Sibrongborong">
         <meta name="author" content="SMA N 2 Siborongborong">
 
         <link rel="icon" type="image/png" href="{{ asset('storage/logo/favicon.png') }}" sizes="48x48">
@@ -58,12 +58,12 @@
             "name": "SMA N 2 Siborongborong - Perpustakaan SIMPAS",
             "url": "https://SIMPAS.my.id",
             "logo": "https://SIMPAS.my.id/storage/logo/logo.webp",
-            "sameAs": ["https://www.smpnegeri1tarutung.sch.id"],
+            "sameAs": ["https://www.sman2siborongborong.sch.id"],
             "description": "Perpustakaan digital SMA N 2 Siborongborong dengan koleksi buku dan e-book pendidikan.",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Jl. Nahum Situmorang No. 1, Hutatoruan V",
-                "addressLocality": "Tarutung",
+                "streetAddress": "Jl. Balige KM. 1. 1, Siborongborong",
+                "addressLocality": "Siborongborong",
                 "addressRegion": "Sumatera Utara",
                 "postalCode": "22413",
                 "addressCountry": "ID"
@@ -82,8 +82,8 @@
             "url": "https://SIMPAS.my.id",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Jl. Nahum Situmorang No. 1, Hutatoruan V",
-                "addressLocality": "Tarutung",
+                "streetAddress": "Jl. Balige KM. 1. 1, Siborongborong",
+                "addressLocality": "Siborongborong",
                 "addressRegion": "Sumatera Utara",
                 "postalCode": "22413",
                 "addressCountry": "ID"
@@ -95,7 +95,7 @@
             },
             "openingHours": "Mo-Fr 07:30-15:00",
             "sameAs": [
-                "https://www.smpnegeri1tarutung.sch.id",
+                "https://www.sman2siborongborong.sch.id",
                 "https://maps.google.com/?cid=XXXXXXXXXXXX"
             ]
             }

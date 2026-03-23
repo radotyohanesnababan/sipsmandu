@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\ReturnBookRecordController;
 use App\Http\Controllers\Admin\BookImportController;
+use App\Http\Controllers\Admin\BorrowedScanController;
 use App\Http\Controllers\Admin\MemberImportController;
 use App\Http\Controllers\Admin\RombelBorrowController;
 use App\Http\Controllers\Admin\ScanReturnController;
@@ -53,6 +54,11 @@ Route::middleware('auth','role:admin')->prefix('admin')->group(function (){
 
         
     });
+
+    Route::controller(BorrowedScanController::class)->group(function () {
+       Route::post('borrowed-scans', 'scan')->name('admin.borrowed-scans.scan'); 
+    });
+
     Route::controller(RombelBorrowController::class)->group(function () {
     Route::get('rombel-borrows', 'index')->name('admin.rombel-borrows.index');
     Route::get('rombel-borrows/create', 'create')->name('admin.rombel-borrows.create');

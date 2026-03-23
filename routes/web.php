@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\BookImportController;
-
+use Illuminate\Support\Facades\Auth;
 
 Route::controller(WelcomeController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
@@ -55,7 +55,6 @@ Route::controller(ReturnBookFrontController::class)->middleware(['web','auth','r
     
 });
 
-// Profile Library Card Route
 Route::middleware('auth')->group(function () {
     Route::get('/profile/card', function () {
         return Inertia::render('Profile/LibraryCard', [

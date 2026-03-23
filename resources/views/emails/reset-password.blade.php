@@ -10,7 +10,7 @@
     <table align="center" width="100%" style="max-width:600px; margin:auto; background-color:#ffffff; border-radius:10px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
         <tr>
             <td style="background-color:#ffffff; padding:20px; text-align:center;">
-                <img src="{{ asset('storage/logo/logosekolah.png') }}" alt="Logo Perpustakaan"
+                <img src="{{ asset('storage/logo/logosekolah.webp') }}" alt="Logo Perpustakaan"
                 style="width:80px; height:auto; margin-bottom:10px;">
                 <h2 style="color:#111827; margin:0;">SIMPAS </h2>
                 <h2 style="color:#111827; margin:0;">Tim Perpustakaan SMA N 2 Siborongborong</h2>

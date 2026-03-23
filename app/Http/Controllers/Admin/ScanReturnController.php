@@ -102,6 +102,10 @@ class ScanReturnController extends Controller
                 'status'      => $request->kondisi === 'Hilang' ? 'Ditolak' : 'Dikembalikan',
                 'return_date' => Carbon::now(),
             ]);
+
+            $borrowed->update([
+                'status' => 'returned',
+            ]);
                     // Buat ReturnBookCheck
             ReturnBookCheck::create([
                 'return_book_id' => $returnBook->id,

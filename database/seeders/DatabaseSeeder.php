@@ -37,7 +37,11 @@ class DatabaseSeeder extends Seeder
         Category::factory()->count(8)->create();
 
         //Buat Kelas
-        $kelasList = ['VII', 'VIII', 'IX'];
+        $kelasList = [
+            'X',
+            'XI',
+            'XII',
+        ];
 
         foreach ($kelasList as $tingkat) {
             Kelas::firstOrCreate(['tingkat' => $tingkat]);

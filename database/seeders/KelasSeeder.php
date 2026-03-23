@@ -9,7 +9,11 @@ class KelasSeeder extends Seeder
 {
     public function run(): void
     {
-        $kelasList = ['VII', 'VIII', 'IX'];
+        $kelasList = [
+            'X',
+            'XI',
+            'XII',
+        ];
 
         foreach ($kelasList as $tingkat) {
             Kelas::firstOrCreate(['tingkat' => $tingkat]);

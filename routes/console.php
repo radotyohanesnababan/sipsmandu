@@ -1,10 +1,7 @@
 <?php
 
-use Illuminate\Foundation\Console\ClosureCommand;
-use Illuminate\Foundation\Inspiring;
-use Illuminate\Support\Facades\Artisan;
 
-Artisan::command('inspire', function () {
-    /** @var ClosureCommand $this */
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+use Illuminate\Support\Facades\Schedule;
+
+Schedule::command('reminder:jatuh-tempo-peminjaman')->dailyAt('07:00');
+Schedule::command('borrowed:expire')->hourly();

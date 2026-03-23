@@ -24,7 +24,7 @@
 <body>
 @php
     
-    $logoSekolahPath = public_path('storage/logo/logosekolah.png');
+    $logoSekolahPath = public_path('storage/logo/logosekolah.webp');
     $logoPemkabPath  = public_path('storage/logo/logopemkab.png');
 
     $logoSekolahBase64 = file_exists($logoSekolahPath) ? 'data:image/'.pathinfo($logoSekolahPath, PATHINFO_EXTENSION).';base64,'.base64_encode(file_get_contents($logoSekolahPath)) : null;
@@ -45,10 +45,10 @@
           <div style="font-size:17px; border: none; font-weight:700; margin-bottom:2px;">DINAS PENDIDIKAN DAN KEBUDAYAAN</div>
           <div style="font-size:17px; border: none; font-weight:700; margin-bottom:4px;">SMA N 2 Siborongborong</div>
           <div style="font-size:11px; border: none; margin-bottom:2px;">
-            Jalan Nahum Situmorang Tarutung 22413 &nbsp; Provinsi Sumatera Utara
+            Jalan Balige Km.1, Siborongborong 22413 &nbsp; Provinsi Sumatera Utara
           </div>
           <div style="font-size:11px;">
-            Email: <span style="text-decoration: none; color: #000;">smpn1tarutung.taput@gmail.com</span>
+            Email: <span style="text-decoration: none; color: #000;">sman2siborongborong@gmail.com</span>
           </div>
         </div>
       </td>

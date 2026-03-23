@@ -14,6 +14,22 @@ import { IconArrowsDownUp, IconCreditCardPay, IconEye, IconRefresh } from '@tabl
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
+function StatusBadge({ status }) {
+    const map = {
+        pending:   { label: 'Menunggu Pengambilan', className: 'bg-yellow-100 text-yellow-700' },
+        active:    { label: 'Dipinjam',             className: 'bg-blue-100 text-blue-700' },
+        returned:  { label: 'Dikembalikan',         className: 'bg-green-100 text-green-700' },
+        expired:   { label: 'Expired',              className: 'bg-red-100 text-red-700' },
+        cancelled: { label: 'Dibatalkan',           className: 'bg-slate-100 text-slate-700' },
+    };
+    const s = map[status] ?? { label: status, className: 'bg-slate-100 text-slate-500' };
+    return (
+        <span className={`px-2 py-1 rounded-full text-xs font-medium ${s.className}`}>
+            {s.label}
+        </span>
+    );
+}
+
 export default function Index(props) {
     useEffect(() => {
         if (props.flash_message?.message) {
@@ -104,7 +120,7 @@ export default function Index(props) {
                                         </span>
                                     </Button>
                                 </TableHead>
-
+                                <TableHead>Status</TableHead>
                                 <TableHead>
                                     <Button
                                         variant="ghost"
@@ -168,6 +184,9 @@ export default function Index(props) {
                                 <TableRow key={borrowed.id}>
                                     <TableCell>{index + 1 + (meta.current_page - 1) * meta.per_page}</TableCell>
                                     <TableCell>{borrowed.id}</TableCell>
+                                    <TableCell>
+                                        <StatusBadge status={borrowed.status} />
+                                    </TableCell>
                                     <TableCell>{borrowed.book.judul}</TableCell>
                                     <TableCell>{borrowed.borrowed_at}</TableCell>
                                     <TableCell>{borrowed.returned_at}</TableCell>

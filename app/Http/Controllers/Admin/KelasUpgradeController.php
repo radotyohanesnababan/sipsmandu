@@ -59,9 +59,9 @@ class KelasUpgradeController extends Controller
         $kelasAsal = Kelas::find($request->kelas_asal);
 
         $kelasTujuan = match ($kelasAsal->tingkat) {
-            'VII' => Kelas::where('tingkat', 'VIII')->first(),
-            'VIII' => Kelas::where('tingkat', 'IX')->first(),
-            'IX' => null,
+            'X' => Kelas::where('tingkat', 'XI')->first(),
+            'XI' => Kelas::where('tingkat', 'XII')->first(),
+            'XII' => null,
         };
 
         if (!$kelasTujuan) {

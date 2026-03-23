@@ -12,11 +12,14 @@ class Borrowed extends Model
         'user_nisn',
         'book_id',
         'borrowed_at',
+        'expired_at',
+        'status',
         'returned_at',
     ];
     protected $casts = [
         'borrowed_at' => 'date',
         'returned_at' => 'date',
+        'expired_at' => 'date',
     ];
     public function user() 
     {
@@ -53,23 +56,21 @@ class Borrowed extends Model
     }
 
     public static function checkBorrowedBook(int $user_nisn, int $book_id): bool
-    {
-        return self::query()
-            ->where('user_nisn', $user_nisn)
-            ->where('book_id', $book_id)
-            ->whereDoesntHave('returnBook', fn($query)=> $query->where('book_id', $book_id)->where('user_nisn', $user_nisn))
-            ->exists();
-    }
+{
+    return self::query()
+        ->where('user_nisn', $user_nisn)
+        ->where('book_id', $book_id)
+        ->whereIn('status', ['pending', 'active']) // ← tambah ini
+        ->exists();
+}
 
     public static function activeBorrowedBook(int $user_nisn): int
-    {
-        return self::query()
+{
+    return self::query()
         ->where('user_nisn', $user_nisn)
-        ->whereDoesntHave('returnBook', function ($query) {
-            $query->whereIn('status', ['Dikembalikan', 'Ditolak']);
-        })
+        ->whereIn('status', ['pending', 'active']) // ← tambah ini
         ->count();
-    }
+}
 
     public static function totalLoanBooks(): array
     {

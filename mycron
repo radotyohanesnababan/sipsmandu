@@ -1,2 +1,0 @@
-* * * * * php /home/perpus-smp-1-tarutung/public_html/artisan schedule:run >> /dev/null 2>&1
-* * * * * php /home/perpus-smp-1-tarutung/public_html/artisan queue:work --once --timeout=60 --tries=3 >> /dev/null 2>&1

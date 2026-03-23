@@ -24,6 +24,7 @@ class BorrowedFrontResource extends JsonResource
                 'nisn' => $this->user?->nisn,
                 'nama' => $this->user?->nama,
             ]),
+            'status' => $this->status,
             'book' => $this->whenLoaded('book',[
                 'id' => $this->book?->id,
                 'judul' => $this->book?->judul,

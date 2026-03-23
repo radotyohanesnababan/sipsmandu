@@ -5,6 +5,7 @@ import { IconCards } from "@tabler/icons-react";
 import { Head } from "@inertiajs/react";
 import HeaderTitle from "@/Components/HeaderTitle";
 import { Button } from "@/Components/ui/button";
+import { QRCodeSVG } from 'qrcode.react';
 
 export default function LibraryCard({ user}) {
 
@@ -38,26 +39,50 @@ export default function LibraryCard({ user}) {
             <h1 className="text-2xl font-bold mb-4">Kartu Perpustakaan</h1>
 
             <div 
-                ref={cardRef}
-                className="w-[320px] h-[200px] bg-white rounded-xl shadow-xl border p-4 relative flex"
-                style={{ backgroundImage: "url('/storage/bgcard.jpg')", backgroundSize: "cover" }}
-            >
-                <div className="ml-4 flex flex-col justify-center">
-                    <h2 className="font-bold text-lg text-black">{user.nama}</h2>
-                    <p className="text-sm text-black">NISN: {user.nisn ?? "-"}</p>
-                    <p className="text-sm text-black">Kelas: {user.kelas_id ?? "-"}</p>
-                    <p className="text-xs mt-2 text-gray-500">Kartu Perpustakaan SMA N 2 Siborongborong</p>
-                </div>
-                <div className="absolute top-2 right-3 text-sm font-semibold text-gray-600">
-                    {new Date().getFullYear()}
-                </div>
-                <img 
-                    src="/storage/logosekolah-rbg.png"
-                    className="absolute left-1/2 top-2 w-10 -translate-x-1/2"
-                    alt="logo"
+    ref={cardRef}
+    className="w-[380px] h-[220px] bg-white rounded-2xl shadow-xl border relative overflow-hidden flex flex-col"
+    style={{ backgroundImage: "url('/storage/bgcard.jpg')", backgroundSize: "cover" }}
+>
+    {/* Header bar */}
+    <div className="flex items-center gap-2 px-4 pt-3 pb-2">
+        <img 
+            src="/storage/logosekolah.webp"
+            className="w-8 h-8 object-contain"
+            alt="logo"
+        />
+        <div>
+            <p className="text-xs font-bold text-black leading-tight">SMA N 2 Siborongborong</p>
+            <p className="text-xs text-gray-600 leading-tight">Kartu Anggota Perpustakaan</p>
+        </div>
+        <span className="ml-auto text-xs font-semibold text-gray-600">{new Date().getFullYear()}</span>
+    </div>
+
+    {/* Divider */}
+    <div className="mx-4 border-t border-black/10" />
+
+    {/* Body */}
+    <div className="flex flex-1 items-center px-4 py-2 gap-4">
+        {/* Info siswa */}
+        <div className="flex-1">
+            <h2 className="font-bold text-base text-black leading-tight">{user.nama}</h2>
+            <p className="text-xs text-gray-700 mt-1">NISN: {user.nisn ?? "-"}</p>
+            <p className="text-xs text-gray-700">Kelas: {user.kelas_id ?? "-"}</p>
+        </div>
+
+        {/* QR Code */}
+        <div className="flex flex-col items-center gap-1 flex-shrink-0">
+            <div className="bg-white p-1 rounded-lg">
+                <QRCodeSVG 
+                    value={String(user.nisn ?? '')}
+                    size={75}
+                    bgColor="#ffffff"
+                    fgColor="#000000"
                 />
-                
             </div>
+            
+        </div>
+    </div>
+</div>
             <Button
                 onClick={downloadCard}
                 className="mt-6 bg-sky-500 hover:bg-sky-600 text-white font-semibold"

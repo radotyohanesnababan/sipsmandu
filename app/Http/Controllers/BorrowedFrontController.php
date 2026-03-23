@@ -16,7 +16,7 @@ class BorrowedFrontController extends Controller
 {
     public function index(): Response {
         $borroweds = Borrowed::query()
-            ->select(['id', 'user_nisn', 'book_id', 'created_at', 'borrowed_at', 'returned_at'])
+            ->select(['id', 'user_nisn', 'book_id', 'created_at', 'borrowed_at', 'returned_at', 'status'])
             ->where('user_nisn', Auth::user()->nisn)
             ->filter(request()->only(['search']))
             ->sorting(request()->only(['field', 'direction']))
@@ -54,35 +54,32 @@ class BorrowedFrontController extends Controller
         ]);
     }
 
-    public function store(Book $book): RedirectResponse{
-
-        //dd(Auth::check(), Auth::user());
-        //dd(Borrowed::activeBorrowedBook(Auth::user()->nisn));
-        if (Borrowed::activeBorrowedBook(Auth::user()->nisn) >= 2) {
+   public function store(Book $book): RedirectResponse {
+    if (Borrowed::activeBorrowedBook(Auth::user()->nisn) >= 2) {
         flashMessage('Anda sudah meminjam 2 buku. Kembalikan salah satu dulu sebelum meminjam lagi.', 'error');
         return to_route('front.books.show', $book->slug);
-        }
-
-        if(Borrowed::checkBorrowedBook(Auth::user()->nisn, $book->id)) {
-            flashMessage('Anda sudah meminjam buku ini, harap kembalikan buku terlebih dahulu', 'error');
-            return to_route('front.books.show', $book->slug);
-        }
-        if(
-            $book->stock->available <= 0
-        ){
-            flashMessage('Stock tidak tersedia', 'error');
-            return to_route('front.books.show', $book->slug);
-        }
-        $borrowed = tap(Borrowed::create([
-                'user_nisn' => Auth::user()->nisn,
-                'book_id' => $book->id,
-                'borrowed_at' => Carbon::now()->toDateString(),
-                'returned_at' => Carbon::now()->addDays(7)->toDateString(),
-        ]), function ($borrowed)  {
-            $borrowed->book->stock_borrowed();
-            flashMessage('Peminjaman Berhasil', 'success');
-        });
-
-        return to_route('front.borroweds.index');
     }
+
+    if (Borrowed::checkBorrowedBook(Auth::user()->nisn, $book->id)) {
+        flashMessage('Anda sudah meminjam buku ini, harap kembalikan buku terlebih dahulu', 'error');
+        return to_route('front.books.show', $book->slug);
+    }
+
+    if ($book->stock->available <= 0) {
+        flashMessage('Stock tidak tersedia', 'error');
+        return to_route('front.books.show', $book->slug);
+    }
+
+    tap(Borrowed::create([
+        'user_nisn'  => Auth::user()->nisn,
+        'book_id'    => $book->id,
+        'status'     => 'pending',
+        'expired_at' => Carbon::now()->addDays(2),
+    ]), function ($borrowed) {
+        $borrowed->book->stock_borrowed();
+        flashMessage('Berhasil booking buku, segera ambil dalam 2 hari', 'success');
+    });
+
+    return to_route('front.borroweds.index');
+}
 }

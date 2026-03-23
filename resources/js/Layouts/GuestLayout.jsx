@@ -11,7 +11,7 @@ export default function GuestLayout({ title, children }) {
                 <meta name="author" content="Tim Perpustakaan SMA N 2 Siborongborong" />
                 <meta
                     name="keywords"
-                    content="perpustakaan, SMA N 2 Siborongborong, SIMPAS, buku digital, sekolah, smp, tarutung, buku"
+                    content="perpustakaan, SMA N 2 Siborongborong, SIMPAS, buku digital, sekolah, smp, siborongborong, buku"
                 />
                 <meta
                     name="description"
