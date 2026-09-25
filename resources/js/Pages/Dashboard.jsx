@@ -46,7 +46,7 @@ export default function Dashboard(props) {
             data={{
                 title: 'Total Buku',
                 icon: IconBooks,
-                background: 'text-white  from-green-400 via-green-500 to-green-600',
+                background: 'text-white  from-green-400 via-green-500 to-green-600 dark:from-green-400 dark:via-green-500 dark:to-green-600',
                 iconClassName: 'text-white',
             }}
         >
@@ -56,7 +56,7 @@ export default function Dashboard(props) {
             data={{
                 title: 'Total Pengguna',
                 icon: IconUsersGroup,
-                background: 'text-white  from-purple-400 via-purple-500 to-purple-600',
+                background: 'text-white  from-purple-400 via-purple-500 to-purple-600 dark:from-purple-400 dark:via-purple-500 dark:to-purple-600',
                 iconClassName: 'text-white',
             }}
         >
@@ -66,7 +66,7 @@ export default function Dashboard(props) {
             data={{
                 title: 'Total Peminjaman',
                 icon: IconCreditCardPay,
-                background: 'text-white  from-rose-400 via-rose-500 to-rose-600',
+                background: 'text-white  from-rose-400 via-rose-500 to-rose-600 dark:from-rose-400 dark:via-rose-500 dark:to-rose-600',
                 iconClassName: 'text-white',
             }}
         >
