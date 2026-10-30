@@ -6,6 +6,7 @@ use App\Models\Book;
 use App\Models\Category;
 use App\Models\Publisher;
 use App\Models\Stock;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BookFactory extends Factory
@@ -13,21 +14,22 @@ class BookFactory extends Factory
     protected $model = Book::class;
 
     public function definition(): array
-    {
-        $categoryIds = Category::pluck('id')->toArray();
-        $publisherIds = Publisher::pluck('id')->toArray();
-        $covers = ['samplecover.jpg'];
+{
+    static $no = 0;
+    $no++;
 
-        return [
-            'judul' => $this->faker->sentence(3),
-            'slug' => $this->faker->slug(),
-            'tahun_terbit' => $this->faker->numberBetween(1990, 2025),
-            'isbn' => $this->faker->isbn13(),
-            'deskripsi' => $this->faker->paragraph(),
-            'kondisi' => 'Tersedia',
-            'cover' => 'storage/covers/' . $this->faker->randomElement($covers),
-            'category_id' => $this->faker->randomElement($categoryIds),
-            'publisher_id' => $this->faker->randomElement($publisherIds),
-        ];
-    }
+    $judul = 'Buku Contoh ' . $no;
+
+    return [
+        'judul' => $judul,
+        'slug' => Str::slug($judul) . '-' . Str::lower(Str::random(5)),
+        'tahun_terbit' => random_int(1990, 2025),
+        'isbn' => '978' . str_pad((string) random_int(0, 9999999999), 10, '0', STR_PAD_LEFT),
+        'deskripsi' => 'Deskripsi contoh untuk ' . $judul . '.',
+        'kondisi' => 'Tersedia',
+        'cover' => 'storage/covers/samplecover.jpg',
+        'category_id' => Category::inRandomOrder()->value('id'),
+        'publisher_id' => Publisher::inRandomOrder()->value('id'),
+    ];
+}
 }

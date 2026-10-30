@@ -35,6 +35,20 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-psecret"]
       interval: 5s
       retries: 10
+  redis:
+    image: redis:7-alpine
+    mem_limit: 64m
+  node:
+    image: node:22
+    user: "1000:1000"
+    working_dir: /app
+    environment:
+      HOME: /tmp
+    volumes:
+      - ./:/app\
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
 
 volumes:
   dbdata:

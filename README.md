@@ -44,3 +44,6 @@ Dibangun menggunakan **Laravel + React + MySQL**, aplikasi ini membantu admin da
     - Password: `password`
 
 ---
+## Docker
+docker run --rm -u $(id -u):$(id -g) -e HOME=/tmp -v "$PWD":/app -w /app node:22 sh -c "npm ci && npm run build"
+

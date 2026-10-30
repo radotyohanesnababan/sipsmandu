@@ -25,18 +25,16 @@ class AppServiceProvider extends ServiceProvider
     Vite::prefetch(concurrency: 3);
     JsonResource::withoutWrapping();
 
-    if (config('app.env') === 'production') {
-        // 1. Ambil host yang sedang diakses user secara otomatis
-        $host = request()->getHost();
+    if (config('app.env') === 'production' && config('app.force_https', true)) {
+    // Ambil host yang sedang diakses user secara otomatis
+    $host = request()->getHost();
 
-        // 2. Jika host terdeteksi, gunakan host tersebut sebagai basis URL
-        // Ini jauh lebih aman daripada hardcoded SIMPAS.my.id
-        if ($host) {
-            \Illuminate\Support\Facades\URL::forceRootUrl("https://{$host}");
-        }
+    if ($host) {
+        \Illuminate\Support\Facades\URL::forceRootUrl("https://{$host}");
+    }
 
-        // 3. Paksa protokol HTTPS (Wajib untuk Cloudflare)
-        \Illuminate\Support\Facades\URL::forceScheme('https');
+    // Paksa protokol HTTPS (wajib untuk Cloudflare)
+    \Illuminate\Support\Facades\URL::forceScheme('https');
     }
 }
 }

@@ -11,7 +11,7 @@ class StockFactory extends Factory
 
     public function definition(): array
     {
-        $total = $this->faker->numberBetween(5, 10);
+        $total = random_int(1, 20);
 
         return [
             'book_id' => null, 
