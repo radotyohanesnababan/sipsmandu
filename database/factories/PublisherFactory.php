@@ -16,8 +16,7 @@ class PublisherFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'name'=> $name = $this->faker->unique()->randomElement([
+            static $names = [
                 'Gramedia',
                 'Erlangga',
                 'Mizan',
@@ -32,9 +31,16 @@ class PublisherFactory extends Factory
                 'Penerbit Hikmah',
                 'Penerbit Diva Press',
                 'Penerbit Grasindo',
+            ];
+            static $i = 0;
 
-            ]),
-            'slug'=> str()->lower(str()->slug($name)) . str()->random(4),
-        ];
+            $name = $names[$i % count($names)];
+            $i++;
+
+            return [
+                'name' => $name,
+                'slug' => str()->slug($name) . str()->lower(str()->random(4)),
+            ];
+        
     }
 }

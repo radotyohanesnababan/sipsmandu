@@ -1,0 +1,35 @@
+services:
+  app:
+    image: sipsmandu-app:test
+    env_file: .env
+    environment:
+      DB_HOST: db
+      INERTIA_SSR_ENABLED: "true"
+      INERTIA_SSR_URL: http://ssr:13714
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    image: sipsmandu-web:test
+    ports:
+      - "8081:80"
+    depends_on:
+      - app
+
+  ssr:
+    image: sipsmandu-ssr:test
+
+  db:
+    image: mysql:8
+    command: --performance-schema=OFF --innodb-buffer-pool-size=128M --max-connections=30
+    mem_limit: 512m
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "mysql -h127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD -e 'SELECT 1'"]
+      interval: 5s
+      retries: 20

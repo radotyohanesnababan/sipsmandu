@@ -15,10 +15,9 @@ class CategoryFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
-    {
-        return [
-            'name' => $name = $this->faker->unique()->randomElement([
+        public function definition(): array
+        {
+            static $names = [
                 'Novel',
                 'Komik',
                 'Majalah',
@@ -27,9 +26,15 @@ class CategoryFactory extends Factory
                 'Buku Referensi',
                 'Buku Fiksi',
                 'Buku Non-Fiksi',
-                
-            ]),
-            'slug'=> str()->lower(str()->slug($name)) . str()->random(4),
-        ];
-    }
+            ];
+            static $i = 0;
+
+            $name = $names[$i % count($names)];
+            $i++;
+
+            return [
+                'name' => $name,
+                'slug' => str()->slug($name) . str()->lower(str()->random(4)),
+            ];
+        }
 }
